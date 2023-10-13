@@ -13,10 +13,6 @@
 <%}else{ %>
 <h1><%="WELCOME TO LOGIN PAGE" %></h1>
 <%} %>
-
-
-
-
 <form action="login" method="post">
 Email::<input type="email" name="email">
 <br>

@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.swing.border.EtchedBorder;
 
 import studentwithjspm2.dto.Student;
 
@@ -28,6 +29,15 @@ public class StudentDao {
 		entityManager.persist(student);
 		entityTransaction.commit();
 		return student;
+	}
+
+	public void deleteStudent(int id) {
+	EntityManager entityManager=getEntityManager();
+	Student student=entityManager.find(Student.class, id);
+	EntityTransaction entityTransaction=entityManager.getTransaction();
+	entityTransaction.begin();
+	entityManager.remove(student);
+	entityTransaction.commit();
 	}
 	
 	
