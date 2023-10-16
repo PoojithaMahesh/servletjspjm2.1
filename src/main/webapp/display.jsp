@@ -37,19 +37,9 @@
 
 
 <td><a href="delete?id=<%=student.getId() %>">delete</a></td>
-<td><a>update</a></td>
+<td><a href="update?id=<%=student.getId() %>">update</a></td>
 </tr>
 <%} %>
-
-
-
-
-
-
-
-
-
-
 
 </table>
 
